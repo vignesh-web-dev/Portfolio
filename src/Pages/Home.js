@@ -17,29 +17,29 @@ export default function Home() {
 
           <div className={home.logos}>
             <div className={home.logoSlide}>
-              <img src="html.png" alt=""></img>
-              <img src="css.png" alt=""></img>
-              <img src="javascript.png" alt=""></img>
-              <img src="react.png" alt=""></img>
+              <img src="/html.png" alt=""></img>
+              <img src="/css.png" alt=""></img>
+              <img src="/javascript.png" alt=""></img>
+              <img src="/react.png" alt=""></img>
             </div>
             <div className={home.logoSlide}>
-              <img src="html.png" alt=""></img>
-              <img src="css.png" alt=""></img>
-              <img src="javascript.png" alt=""></img>
-              <img src="react.png" alt=""></img>
+              <img src="/html.png" alt=""></img>
+              <img src="/css.png" alt=""></img>
+              <img src="/javascript.png" alt=""></img>
+              <img src="/react.png" alt=""></img>
             </div>
             <div className={home.logoSlide}>
-              <img src="html.png" alt=""></img>
-              <img src="css.png" alt=""></img>
-              <img src="javascript.png" alt=""></img>
-              <img src="react.png" alt=""></img>
+              <img src="/html.png" alt=""></img>
+              <img src="/css.png" alt=""></img>
+              <img src="/javascript.png" alt=""></img>
+              <img src="/react.png" alt=""></img>
             </div>
           </div>
         </div>
         <div className={home.imgDiv}>
-          <img src="person.png" alt=""></img>
-          <img src="Dots.png" alt=""></img>
-          <img src="Linelogo.png" alt=""></img>
+          <img src="/person.png" alt=""></img>
+          <img src="/Dots.png" alt=""></img>
+          <img src="/Linelogo.png" alt=""></img>
           <div className={home.imgDivBottomText}>
             <div></div>
             <p>
@@ -50,9 +50,9 @@ export default function Home() {
       </div>
       <div className={home.wrapper2}>
         <div className={home.innerdiv}>
-          <img src="quote.png" alt="mark"></img>
+          <img src="/quote.png" alt="mark"></img>
           <h2>I'm not lazy, I'm just on 'developer mode'.</h2>
-          <img src="quote.png" alt="mark"></img>
+          <img src="/quote.png" alt="mark"></img>
         </div>
       </div>
       <Footer></Footer>
