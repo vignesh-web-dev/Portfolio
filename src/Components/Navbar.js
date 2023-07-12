@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <div className={nav.wrapper}>
       <a className={nav.link} href="www.google.com">
-        <img src="/logo.png" alt="logo"></img>
+        <img src="./logo.png" alt="logo"></img>
       </a>
       <div className={nav.deskwrapper}>
         <ul className={nav.list}>
@@ -50,14 +50,14 @@ export default function Navbar() {
           <img
             onClick={menuClick}
             className={nav.menu}
-            src="/cancel.png"
+            src="./cancel.png"
             alt="cencel"
           ></img>
         ) : (
           <img
             onClick={menuClick}
             className={nav.cancel}
-            src="/menu.png"
+            src="./menu.png"
             alt="menu"
           ></img>
         )}
@@ -93,13 +93,13 @@ export default function Navbar() {
           <div className={nav.socialwrapper}>
             <div className={nav.socialwrapper2}>
               <a href="https://www.linkedin.com/in/vignesh-sivagnanam-43316215a">
-                <img src="/Linkedin.svg" alt="linkedin"></img>
+                <img src="./Linkedin.svg" alt="linkedin"></img>
               </a>
               <a href="https://github.com/vignesh-web-dev">
-                <img src="/Github.svg" alt="Twitter"></img>
+                <img src="./Github.svg" alt="Twitter"></img>
               </a>
               <a href="mailto: vickyshiva26@gmail.com">
-                <img src="/Email.svg" alt="Email"></img>
+                <img src="./Email.svg" alt="Email"></img>
               </a>
             </div>
           </div>
