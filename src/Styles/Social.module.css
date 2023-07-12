@@ -1,0 +1,22 @@
+.line {
+  width: 1px;
+  background-color: #fff;
+  height: 150px;
+}
+.wrapper {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+img {
+  width: 25px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}

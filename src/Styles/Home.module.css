@@ -1,0 +1,148 @@
+.wrapper1 {
+  display: flex;
+  padding-top: 50px;
+}
+.textDiv {
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: start;
+  align-items: start;
+  padding-top: 60px;
+}
+.textDiv > h2 {
+  color: #fff;
+  font-weight: 600;
+}
+.textDiv > p {
+  color: #ffffffb1;
+}
+.textDiv > button {
+  background: transparent;
+  border: #c778dd 1px solid;
+  padding: 10px 10px;
+  color: #fff;
+}
+
+.imgDiv {
+  width: 47%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.imgDiv > img:nth-child(1) {
+  width: 70%;
+  height: auto;
+}
+.imgDiv > img:nth-child(2) {
+  width: 13%;
+  height: auto;
+  position: absolute;
+  right: 12%;
+  top: 56%;
+}
+.imgDiv > img:nth-child(3) {
+  width: 22%;
+  height: auto;
+  position: absolute;
+  left: 15%;
+  z-index: -1;
+  top: 30%;
+}
+.imgDivBottomText {
+  color: #fff;
+  border: 0.5px #fff solid;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.imgDivBottomText > p {
+  display: block;
+}
+.imgDivBottomText > div {
+  height: 25px;
+  width: 25px;
+  background-color: #c778dd;
+  margin-right: 15px;
+}
+
+.wrapper2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+.innerdiv {
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+.innerdiv > h2 {
+  padding: 10px;
+  border: #c778dd 2px solid;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.innerdiv > img {
+  position: absolute;
+}
+.innerdiv > img:first-child {
+  top: -8%;
+  left: 3%;
+}
+.innerdiv > img:last-child {
+  bottom: -8%;
+  right: 3%;
+}
+.logos {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+.logoSlide {
+  display: inline-block;
+  animation: 5s slide infinite linear;
+}
+.logoSlide > img {
+  height: 50px;
+  width: auto;
+  margin: 0 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper1 {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .wrapper2 {
+    margin-top: 60px;
+  }
+  .textDiv {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .imgDiv {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper1 {
+    padding-top: 0;
+  }
+}
