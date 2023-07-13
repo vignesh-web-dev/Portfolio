@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <div className={nav.wrapper}>
       <a className={nav.link} href="www.google.com">
-        <img src="./logo.png" alt="logo"></img>
+        <img src="./s-logo.png" alt="logo"></img>
       </a>
       <div className={nav.deskwrapper}>
         <ul className={nav.list}>

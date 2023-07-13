@@ -4,7 +4,8 @@
   position: relative;
 }
 .deskwrapper {
-  display: flex;
+  display: none;
+  /* change display to flex if you want to show navbar items */
   width: 100%;
 }
 .link {
@@ -13,7 +14,7 @@
   z-index: 3;
 }
 .link > img {
-  height: 20px;
+  height: 35px;
   width: auto;
 }
 .list {
@@ -72,9 +73,9 @@ li a {
 }
 
 @media screen and (max-width: 768px) {
-  .icon {
+  /* .icon {
     display: block;
-  }
+  } */
   .deskwrapper {
     display: none;
   }
