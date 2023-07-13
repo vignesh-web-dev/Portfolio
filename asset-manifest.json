@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.78e21781.css",
-    "main.js": "/Portfolio/static/js/main.8e116131.js",
+    "main.js": "/Portfolio/static/js/main.dcc7e89f.js",
     "static/media/VigneshSivagnanam.pdf": "/Portfolio/static/media/VigneshSivagnanam.12e79ed434a456672994.pdf",
     "index.html": "/Portfolio/index.html",
     "main.78e21781.css.map": "/Portfolio/static/css/main.78e21781.css.map",
-    "main.8e116131.js.map": "/Portfolio/static/js/main.8e116131.js.map"
+    "main.dcc7e89f.js.map": "/Portfolio/static/js/main.dcc7e89f.js.map"
   },
   "entrypoints": [
     "static/css/main.78e21781.css",
-    "static/js/main.8e116131.js"
+    "static/js/main.dcc7e89f.js"
   ]
 }
