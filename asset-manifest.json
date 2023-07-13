@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd2231a7.css",
-    "main.js": "/static/js/main.ae2f90fc.js",
-    "static/media/pattern.png": "/static/media/pattern.4b20780370601042c53a.png",
+    "main.css": "/static/css/main.78e21781.css",
+    "main.js": "/static/js/main.f8ffb5b5.js",
+    "static/media/VigneshSivagnanam.pdf": "/static/media/VigneshSivagnanam.12e79ed434a456672994.pdf",
     "index.html": "/index.html",
-    "main.dd2231a7.css.map": "/static/css/main.dd2231a7.css.map",
-    "main.ae2f90fc.js.map": "/static/js/main.ae2f90fc.js.map"
+    "main.78e21781.css.map": "/static/css/main.78e21781.css.map",
+    "main.f8ffb5b5.js.map": "/static/js/main.f8ffb5b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd2231a7.css",
-    "static/js/main.ae2f90fc.js"
+    "static/css/main.78e21781.css",
+    "static/js/main.f8ffb5b5.js"
   ]
 }
