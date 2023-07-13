@@ -12,6 +12,7 @@ function App() {
       <Social />
       <div className="App">
         <Navbar />
+        <Home></Home>
         {/* <Card /> */}
         <Routes>
           <Route path="/" element={<Home />}></Route>
