@@ -6,14 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: url(/public/pattern.png) repeat invert(100%); */
-  background-color: #000000;
+  background-color: #fff9f1;
   background-size: 100px 100px;
-  font-family: "Fira Code", monospace;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 p,
@@ -26,4 +20,9 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: para;
+  src: url(./Fonts/Lekton-Regular.ttf);
 }

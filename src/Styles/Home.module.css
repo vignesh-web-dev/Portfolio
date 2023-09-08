@@ -1,118 +1,180 @@
+@font-face {
+  font-family: Yatra;
+  src: url(../Fonts//YatraOne-Regular.ttf);
+}
+.Section {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .wrapper1 {
   display: flex;
-  padding-top: 50px;
+  flex-direction: column;
+  padding-top: 100px;
+  gap: 60px;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: start;
 }
 .textDiv {
-  width: 53%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: start;
   align-items: start;
-  padding-top: 60px;
+  line-height: normal;
 }
 .textDiv > h2 {
-  color: #fff;
+  color: #ee2f2b;
   font-weight: 600;
+  font-size: 60px;
+  font-family: Yatra;
+}
+.tagline {
+  font-weight: 600;
+  font-size: 42px;
 }
 .textDiv > p {
-  color: #ffffffb1;
+  color: #000000;
+  font-family: para;
+  font-size: 18px;
+  font-weight: 600;
+  font-size: clamp(18px, 1vw, 24px);
+}
+.textDiv > a {
+  text-decoration: none;
+  font-size: clamp(18px, 1vw, 24px);
 }
 .resumeButton {
-  background: transparent;
-  border-left: #c778dd 2px solid;
-  border-right: #c778dd 2px solid;
-  border-top: 0;
-  border-bottom: 0;
+  background: rgb(255, 255, 255);
   border-radius: 30px;
   padding: 10px 30px;
-  color: #fff;
-  font-family: "Fira Code", monospace;
+  color: #000000;
+  font-family: para;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  transition: all 200ms ease-in-out;
 }
-.resumeButton:hover {
-  border: #c778dd 1px solid;
-  transition: all 0.5s ease-in-out;
+.resumeButton::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #000000;
+  z-index: -1;
+  border-radius: 30px;
+  transition: all 200ms ease-in-out;
+}
+.resumeButton:hover::after {
+  top: 0px;
+  left: 0px;
 }
 .nameSpan {
-  color: #f30d0b;
+  color: #d61f26;
+  font-weight: 800;
+  animation: font 1s infinite;
+  line-height: 20px;
+}
+p {
+  font-family: monospace;
+  font-size: 3em;
+}
+
+@keyframes font {
+  0% {
+    font-family: Yatra;
+  }
+  50% {
+    font-family: para;
+  }
+  100% {
+    font-family: Yatra;
+  }
 }
 
 .imgDiv {
-  width: 47%;
-  position: relative;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.imgDiv > img:nth-child(1) {
-  width: 70%;
-  height: auto;
-}
-.imgDiv > img:nth-child(2) {
-  width: 13%;
-  height: auto;
-  position: absolute;
-  right: 12%;
-  top: 56%;
-}
-.imgDiv > img:nth-child(3) {
-  width: 22%;
-  height: auto;
-  position: absolute;
-  left: 15%;
-  z-index: -1;
-  top: 30%;
-}
-.imgDivBottomText {
-  color: #fff;
-  border: 0.5px #fff solid;
   width: 100%;
-  bottom: 0;
-  padding: 5px;
-  display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
-  width: 75%;
-}
-.imgDivBottomText > p {
-  display: block;
-}
-.imgDivBottomText > div {
-  height: 25px;
-  width: 25px;
-  background-color: #f30d0b;
-  margin-right: 15px;
-}
-
-.wrapper2 {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 60px;
-}
-.innerdiv {
-  width: 70%;
-  margin: auto;
+  flex-wrap: wrap;
+  gap: 20px;
   position: relative;
 }
-.innerdiv > h2 {
-  padding: 10px;
-  border: #ffcb05 2px solid;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 30px;
+.imgDivinner {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  max-width: 100px;
 }
-.innerdiv > img {
+.imgDivinner::after {
+  content: "";
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  max-width: 340px;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  border-radius: 20px;
+  z-index: -1;
+  transition: all 200ms ease-in-out;
+}
+.imgDivProfilePhoto {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  position: relative;
+  z-index: 1;
+}
+.imgDivProfilePhotoDeco1,
+.imgDivProfilePhotoDeco2,
+.imgDivProfilePhotoDeco3 {
   position: absolute;
 }
-.innerdiv > img:first-child {
-  top: -8%;
-  left: 3%;
+.imgDivProfilePhotoDeco1 {
+  width: 40px;
+  left: 20px;
+  top: 20px;
+  z-index: 1;
 }
-.innerdiv > img:last-child {
-  bottom: -8%;
-  right: 3%;
+.imgDivProfilePhotoDeco2 {
+  width: 20px;
+  z-index: 1;
+}
+.imgDivProfilePhotoDeco3 {
+  width: 30px;
+  left: 16px;
+  top: 100px;
+}
+.imgDivBottomText1,
+.imgDivBottomText2 {
+  color: #000000;
+  text-align: start;
+  font-family: para;
+  font-weight: 600;
+}
+.imgDivBottomText1 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-top: 20px;
+}
+.imgDivBottomText2 {
+  font-size: clamp(18px, 1vw, 24px);
+  margin-top: 10px;
+}
+.imgDivinner:hover::after {
+  top: 0px;
+  left: 0px;
 }
 .logos {
   overflow: hidden;
@@ -122,7 +184,7 @@
 }
 .logoSlide {
   display: inline-block;
-  animation: 7s slide infinite linear;
+  /* animation: 7s slide infinite linear; */
 }
 .logoSlide > img {
   height: 50px;
@@ -154,9 +216,9 @@
   .imgDiv {
     width: 100%;
   }
+  .imgDivinner {
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 480px) {
-  .wrapper1 {
-    padding-top: 0;
-  }
 }

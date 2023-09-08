@@ -12,9 +12,14 @@
   justify-content: start;
   align-items: center;
 }
-img {
+.wrapper > a > img {
   width: 25px;
+  filter: brightness(0);
 }
+/* .tooltip {
+  background-color: #000;
+  opacity: 1;
+} */
 @media screen and (max-width: 768px) {
   .wrapper {
     display: none;

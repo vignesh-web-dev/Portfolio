@@ -7,4 +7,6 @@
 }
 .wrapper > img {
   margin-right: 15px;
+  width: 50px;
+  filter: invert(1);
 }
