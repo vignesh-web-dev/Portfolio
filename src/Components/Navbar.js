@@ -18,7 +18,51 @@ export default function Navbar() {
   }
   return (
     <div className={nav.wrapper}>
-      <div className={nav.innerwrapper}>
+      <div className={nav.deskWrapper}>
+        <ul className={nav.deskList}>
+          <li>
+            <img
+              className={nav.listspan}
+              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
+              alt="icon"
+            ></img>
+            <NavLink className={nav.NavLink} to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <img
+              className={nav.listspan}
+              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
+              alt="icon"
+            ></img>
+            <NavLink className={nav.NavLink} to="/Works">
+              Works
+            </NavLink>
+          </li>
+          <li>
+            <img
+              className={nav.listspan}
+              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
+              alt="icon"
+            ></img>
+            <NavLink className={nav.NavLink} to="/About">
+              About
+            </NavLink>
+          </li>
+          <li>
+            <img
+              className={nav.listspan}
+              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
+              alt="icon"
+            ></img>
+            <NavLink className={nav.NavLink} to="/Contacts">
+              Contacts
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+      <div className={nav.MobWrapper}>
         <div className={nav.icon} onClick={menuClick}>
           {isMenu && isMenu ? (
             <img

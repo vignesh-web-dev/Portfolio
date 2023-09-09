@@ -14,7 +14,6 @@
 }
 .wrapper > a > img {
   width: 25px;
-  filter: brightness(0);
 }
 /* .tooltip {
   background-color: #000;

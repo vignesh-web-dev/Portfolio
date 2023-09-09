@@ -1,17 +1,28 @@
 .wrapper {
-  position: fixed;
-  right: 1%;
-  top: 4%;
+  /* position: fixed; */
+  /* right: 1%;
+  top: 4%; */
   width: 100%;
   z-index: 2;
   font-family: para;
-  font-size: clamp(18px, 1vw, 24px);
+  font-size: 18px;
   font-weight: 600;
+  height: 100px;
 }
-.innerwrapper {
+.deskWrapper {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+.MobWrapper {
   z-index: 2;
   position: relative;
   margin-left: auto;
+  display: none;
+  height: 100%;
 }
 .link {
   display: flex;
@@ -22,12 +33,33 @@
   height: 35px;
   width: auto;
 }
-.list {
+/* .deskList {
   display: flex;
   list-style: none;
   gap: 30px;
   margin-left: auto;
+} */
+.deskList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+  margin-left: auto;
 }
+.deskList > li {
+  /* border-right: 1px solid #c778dd42; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.deskList > li:hover > .NavLink {
+  color: red;
+}
+.deskList > li:last-child {
+  border-bottom: 0px;
+}
+
 li a {
   color: #abb2bf;
   text-decoration: none;
@@ -57,12 +89,11 @@ li a {
 .mobileWrap {
   background-color: #282c33;
   position: absolute;
-  top: 0px;
-  border-radius: 50px 0px 50px 50px;
   z-index: -1;
+  left: 0;
+  top: 0;
   right: 0;
   padding: 50px;
-  margin-top: 25px;
 }
 .mobList {
   display: flex;
@@ -97,10 +128,12 @@ li a {
 } */
 
 @media screen and (max-width: 768px) {
-  /* .icon {
-    display: block;
-  } */
-  .deskinnerwrapper {
+  .MobWrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .deskWrapper {
     display: none;
   }
   .wrapper {

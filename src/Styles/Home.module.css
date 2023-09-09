@@ -1,7 +1,3 @@
-@font-face {
-  font-family: Yatra;
-  src: url(../Fonts//YatraOne-Regular.ttf);
-}
 .Section {
   width: 90%;
   max-width: 1280px;
@@ -10,41 +6,130 @@
 .wrapper1 {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 60px;
   gap: 60px;
   position: relative;
   justify-content: space-evenly;
   align-items: start;
 }
 .textDiv {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-height: 500px;
+}
+.HomeLeft {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: start;
   align-items: start;
   line-height: normal;
+  text-transform: capitalize;
 }
-.textDiv > h2 {
-  color: #ee2f2b;
+.name {
   font-weight: 600;
   font-size: 60px;
-  font-family: Yatra;
+  font-family: Mounties;
+  color: #24e33a;
+  line-height: 100%;
+  letter-spacing: 10px;
+  font-size: clamp(2.3rem, 4vw, 5rem);
 }
 .tagline {
   font-weight: 600;
-  font-size: 42px;
+  font-size: clamp(1rem, 2vw, 2rem);
+  color: #ffffff;
 }
-.textDiv > p {
-  color: #000000;
+.MainPara {
+  color: #ffffff;
   font-family: para;
-  font-size: 18px;
   font-weight: 600;
-  font-size: clamp(18px, 1vw, 24px);
+  font-size: 18px;
 }
-.textDiv > a {
+.HomeLeft > a {
   text-decoration: none;
-  font-size: clamp(18px, 1vw, 24px);
+  font-size: 18px;
+}
+.HomeRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.HRImgWrapper {
+  width: 100%;
+  position: relative;
+}
+.HRImgmain {
+  width: 100%;
+  z-index: 0;
+}
+.HRImg1 {
+  max-width: 100px;
+  position: absolute;
+  z-index: -1;
+  top: 7%;
+  left: 35%;
+  animation: Rotation 5s infinite linear;
+}
+.HRImg2 {
+  max-width: 24px;
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  top: 38%;
+  animation: Rotation 5s infinite linear;
+}
+.HRImg3 {
+  max-width: 25px;
+  position: absolute;
+  z-index: 1;
+  left: 45%;
+  top: 50%;
+  animation: Rotation 5s infinite linear;
+}
+.HRImg4 {
+  max-width: 25px;
+  position: absolute;
+  z-index: 1;
+  left: 37%;
+  top: 50%;
+  animation: InvertRotation 5s infinite linear;
+}
+@keyframes Rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes InvertRotation {
+  0% {
+    transform: rotate(360deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .resumeButton {
   background: rgb(255, 255, 255);
@@ -75,27 +160,9 @@
   top: 0px;
   left: 0px;
 }
-.nameSpan {
-  color: #d61f26;
-  font-weight: 800;
-  animation: font 1s infinite;
-  line-height: 20px;
-}
 p {
   font-family: monospace;
   font-size: 3em;
-}
-
-@keyframes font {
-  0% {
-    font-family: Yatra;
-  }
-  50% {
-    font-family: para;
-  }
-  100% {
-    font-family: Yatra;
-  }
 }
 
 .imgDiv {
@@ -115,7 +182,11 @@ p {
   border: 2px solid #000000;
   transition: all 200ms ease-in-out;
   position: relative;
-  max-width: 100px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .imgDivinner::after {
   content: "";
@@ -131,8 +202,8 @@ p {
   transition: all 200ms ease-in-out;
 }
 .imgDivProfilePhoto {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   max-width: 300px;
   position: relative;
   z-index: 1;
@@ -165,11 +236,11 @@ p {
   font-weight: 600;
 }
 .imgDivBottomText1 {
-  font-size: clamp(24px, 3vw, 32px);
+  /* font-size: clamp(24px, 3vw, 32px); */
   margin-top: 20px;
 }
 .imgDivBottomText2 {
-  font-size: clamp(18px, 1vw, 24px);
+  /* font-size: clamp(18px, 1vw, 24px); */
   margin-top: 10px;
 }
 .imgDivinner:hover::after {
@@ -200,7 +271,31 @@ p {
     transform: translateX(-100%);
   }
 }
-
+@media screen and (max-width: 991px) {
+  .textDiv {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .HomeRight {
+    width: 100%;
+  }
+  .HRImgmain {
+    width: 100%;
+    min-width: unset;
+  }
+  .HRImgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .HRImg4 {
+    left: 36%;
+  }
+  .HomeLeft {
+    width: 100%;
+    padding-top: 0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .wrapper1 {
     flex-direction: column;
@@ -209,10 +304,7 @@ p {
   .wrapper2 {
     margin-top: 60px;
   }
-  .textDiv {
-    width: 100%;
-    padding-top: 0px;
-  }
+
   .imgDiv {
     width: 100%;
   }
