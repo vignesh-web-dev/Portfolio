@@ -4,10 +4,18 @@ import { NavLink } from "react-router-dom";
 import "../App.css";
 import { useDispatch, useSelector } from "react-redux";
 import { navbarActions } from "../store/navbar-slice";
-import Social from "./Social";
 import { Tooltip } from "react-tooltip";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration (in milliseconds)
+      once: true, // Whether animation should happen only once on scroll
+    });
+  }, []);
   const dispatch = useDispatch();
   const isMenu = useSelector((state) => state.nav.isMenu);
   const menuClick = (e) => {
@@ -19,43 +27,27 @@ export default function Navbar() {
   return (
     <div className={nav.wrapper}>
       <div className={nav.deskWrapper}>
-        <ul className={nav.deskList}>
+        <p className={nav.name} data-aos="slide-up">
+          VIGNESH SIVAGNANAM ©
+        </p>
+
+        <ul data-aos="slide-up" className={nav.deskList}>
           <li>
-            <img
-              className={nav.listspan}
-              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-              alt="icon"
-            ></img>
             <NavLink className={nav.NavLink} to="/">
               Home
             </NavLink>
           </li>
           <li>
-            <img
-              className={nav.listspan}
-              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-              alt="icon"
-            ></img>
             <NavLink className={nav.NavLink} to="/Works">
               Works
             </NavLink>
           </li>
           <li>
-            <img
-              className={nav.listspan}
-              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-              alt="icon"
-            ></img>
             <NavLink className={nav.NavLink} to="/About">
               About
             </NavLink>
           </li>
           <li>
-            <img
-              className={nav.listspan}
-              src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-              alt="icon"
-            ></img>
             <NavLink className={nav.NavLink} to="/Contacts">
               Contacts
             </NavLink>
@@ -63,12 +55,25 @@ export default function Navbar() {
         </ul>
       </div>
       <div className={nav.MobWrapper}>
+        {isMenu ? (
+          <img
+            alt="vignesh-sivagnanam-logo"
+            className={nav.logo}
+            src="https://res.cloudinary.com/de8yvffdl/image/upload/v1695308203/Asset_20web_ae0xsk.png"
+          ></img>
+        ) : (
+          <img
+            alt="vignesh-sivagnanam-logo"
+            className={nav.logo}
+            src="https://res.cloudinary.com/de8yvffdl/image/upload/v1695307621/Asset_19web_ezufsc.png"
+          ></img>
+        )}
         <div className={nav.icon} onClick={menuClick}>
           {isMenu && isMenu ? (
             <img
               className={nav.menu}
               src="https://res.cloudinary.com/de8yvffdl/image/upload/v1690189661/cancel_eznltu.png"
-              alt="cencel"
+              alt="cancel"
             ></img>
           ) : (
             <img
@@ -82,41 +87,21 @@ export default function Navbar() {
           <div className={nav.mobileWrap}>
             <ul className={nav.mobList}>
               <li>
-                <img
-                  className={nav.listspan}
-                  src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-                  alt="icon"
-                ></img>
                 <NavLink className={nav.NavLink} to="/">
                   Home
                 </NavLink>
               </li>
               <li>
-                <img
-                  className={nav.listspan}
-                  src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-                  alt="icon"
-                ></img>
                 <NavLink className={nav.NavLink} to="/Works">
                   Works
                 </NavLink>
               </li>
               <li>
-                <img
-                  className={nav.listspan}
-                  src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-                  alt="icon"
-                ></img>
                 <NavLink className={nav.NavLink} to="/About">
                   About
                 </NavLink>
               </li>
               <li>
-                <img
-                  className={nav.listspan}
-                  src="https://res.cloudinary.com/de8yvffdl/image/upload/v1694006677/Asset_1list_icon_kdufnz.png"
-                  alt="icon"
-                ></img>
                 <NavLink className={nav.NavLink} to="/Contacts">
                   Contacts
                 </NavLink>

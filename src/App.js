@@ -1,21 +1,28 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-// import Card from "./Components/Card";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-// import About from "./Sections/About";
-import Social from "./Components/Social";
+import Initial from "./Components/Initial";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
+  const cursor = useRef(null);
+  const changePosition = (e) => {
+    cursor.current.style.top = `${e.clientY}px`;
+    cursor.current.style.left = `${e.clientX}px`;
+  };
   return (
     <>
-      <Social />
-      <Navbar></Navbar>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-        </Routes>
-      </div>
+      <section onMouseMove={changePosition}>
+        <Initial />
+        <Navbar></Navbar>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+          </Routes>
+        </div>
+        <div className="cursor-style" ref={cursor}></div>
+      </section>
     </>
   );
 }

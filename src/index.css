@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: url(/public/pattern.png) repeat invert(100%); */
-  background-color: #181835;
-  background-size: 100px 100px;
+  background-color: #f0f0f0;
+  cursor: none;
+  min-height: 100dvh;
+}
+* {
+  line-height: 1.4em;
+  cursor: none !important;
+  box-sizing: border-box;
 }
 
 p,
@@ -49,4 +54,16 @@ h6 {
 @font-face {
   font-family: Mounties;
   src: url(./Fonts/MountiesRegular.otf);
+}
+@font-face {
+  font-family: Glook;
+  src: url(./Fonts/Gloock-Regular.ttf);
+}
+@font-face {
+  font-family: Exile;
+  src: url(./Fonts/EXILE12.ttf);
+}
+@font-face {
+  font-family: JosefinSans;
+  src: url(./Fonts/JosefinSans-VariableFont_wght.ttf);
 }
