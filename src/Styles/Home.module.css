@@ -2,73 +2,29 @@
   font-family: JosefinSans;
   font-weight: 500;
 }
-.Section {
-  padding-top: 100px;
-  position: relative;
-  /* min-height: calc(100dvh); */
-  display: flex; /* Use flexbox to make the child fill the parent */
-  flex-direction: column;
-}
-.wrapper1 {
-  width: 90%;
-  max-width: 1280px;
-  margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  align-items: start;
-}
-.wrapper2 {
-  width: 100%; /* Adjust the width as needed */
-  height: 400px; /* Set the desired height for the container */
-  background-image: url("https://res.cloudinary.com/de8yvffdl/image/upload/v1695307559/ddt3z9r-fdf7ae22-5095-4152-9628-568fe7c6477b_h0ay1x.jpg"); /* Replace with your image URL */
-  background-size: cover; /* Scale the image to cover the entire container */
-  background-position: top center; /* Center the image horizontally and vertically */
-  background-repeat: no-repeat; /* Prevent image repetition */
-}
-.position {
-  font-weight: 600;
-  font-family: Exile;
-  color: #000000;
-  font-size: clamp(36px, 6.5vw, 76px);
-}
-.positionSpan {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 248, 0, 1) 50%,
-    rgba(255, 248, 3, 1) 100%
-  );
-  font-weight: 600;
-  font-family: Exile;
-}
-.MainPara {
-  color: #000000;
 
+.MainPara {
+  color: #ffffff;
+  max-width: 800px;
+  text-align: center;
   font-size: 24px;
 }
 .buttonwrap {
   width: 100%;
   text-decoration: none;
 }
-.contactDiv {
-  gap: 30px;
-  display: flex;
-  width: 100%;
-}
 .resumeButton {
   border-radius: 30px;
   padding: 10px 30px;
-  color: #000000;
+  color: #111111;
   font-weight: 500;
   font-size: 24px;
   position: relative;
   display: block;
   transition: all 200ms ease-in-out;
-  width: 100%;
+  background-color: #ff5c00;
+  top: 20px;
+  left: -2px;
 }
 .resumeButton::after {
   content: "";
@@ -76,9 +32,9 @@
   height: 100%;
   display: block;
   position: absolute;
-  top: 5px;
-  left: 5px;
-  background-color: #000000;
+  top: 10px;
+  left: 10px;
+  border: 1px solid #ff5c00;
   z-index: -1;
   border-radius: 30px;
   transition: all 200ms ease-in-out;
@@ -98,15 +54,13 @@
   margin: 0 auto;
   padding: 60px 0;
   position: relative;
+  color: #c8c6c3 !important;
 }
 .ExperienceSectionWrapper {
   display: flex;
   position: relative;
+  gap: 40px;
 }
-/* .ExperienceSectionWrapper > div:first-child {
-  flex-basis: 100%;
-  flex: 1;
-} */
 
 .ExperienceSectionItemsWrapper {
   border-left: 2px solid #e15421;
@@ -140,12 +94,17 @@
   max-height: 100dvh;
   position: sticky;
   top: 100px;
+  filter: grayscale(1);
+}
+.ExperienceSectionRelativeImage:hover {
+  filter: grayscale(0);
 }
 .techDiv {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 60px 0;
+  color: #c8c6c3;
 }
 .techWrapper {
   display: flex;
@@ -159,6 +118,25 @@
   gap: 15px;
   border-radius: 15px;
   border: 2px solid #e15421;
+  position: relative;
+  background-color: #111111;
+}
+.techItem::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #ff5c00;
+  z-index: -1;
+  border-radius: 15px;
+  transition: all 200ms ease-in-out;
+}
+.techItem:hover::after {
+  top: 0px;
+  left: 0px;
 }
 .techItem > h1 {
   font-size: 28px;
@@ -182,57 +160,7 @@
   font-size: 18px;
   font-weight: 500px;
 }
-/* .TestimonialSection {
-  padding: 60px 0;
-}
-.TestimonialDiv {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.TestimonialTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.TestimonialSectionButtonDiv {
-  display: flex;
-  gap: 10px;
-}
-.TestimonialSectionButtonDiv > button {
-  height: 50px;
-  width: 50px;
-  border: 3px solid #e15421;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  border-radius: 15px;
-  color: #e15421;
-}
-.TestimonialSectionButtonDiv > button:hover {
-  color: #fff;
-  background-color: #e15421;
-}
-.TestimonialSlider {
-  padding: 40px 0px;
-}
-.TestimonialSliderInner {
-  display: flex;
-  overflow-x: scroll;
-  white-space: nowrap;
-  gap: 40px;
-  padding: 0 25%;
-}
-.TestimonialSliderInner > div {
-  width: 300px;
-  height: 300px;
-  background-color: #e15421;
-  border: 2px solid #000000;
-  flex: 0 0 75%;
-} */
+
 @media screen and (max-width: 991px) {
 }
 @media screen and (max-width: 768px) {

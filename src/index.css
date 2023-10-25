@@ -5,15 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f0f0;
   cursor: none;
-  min-height: 100dvh;
+  background-color: #111111;
 }
 * {
   line-height: 1.4em;
   cursor: none !important;
   box-sizing: border-box;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 p,
 ul,
@@ -67,3 +69,7 @@ h6 {
   font-family: JosefinSans;
   src: url(./Fonts/JosefinSans-VariableFont_wght.ttf);
 }
+/* @font-face {
+  font-family: Krona;
+  src: url(./Fonts/KronaOne-Regular.ttf);
+} */

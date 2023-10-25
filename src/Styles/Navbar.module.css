@@ -8,7 +8,12 @@
   font-size: 24px;
   font-weight: 500;
   height: 100px;
-  background-color: #f0f0f0;
+  color: #c8c6c3;
+  background-color: #111111;
+  border-bottom: 1px solid #c8c6c3;
+}
+.acti {
+  color: blue;
 }
 .logo {
   width: 75px;
@@ -21,6 +26,8 @@
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
+  justify-content: center;
+  gap: 60px;
 }
 
 .MobWrapper {
@@ -51,7 +58,6 @@
   flex-direction: row;
   list-style: none;
   gap: 15px;
-  margin-left: auto;
 }
 .deskList > li {
   /* border-right: 1px solid #c778dd42; */
@@ -68,7 +74,7 @@
 }
 
 li a {
-  color: #000000;
+  /* color: #000000; */
   text-decoration: none;
 }
 .listspan {
@@ -83,7 +89,7 @@ li a {
   justify-content: center;
   align-items: center;
   z-index: 3;
-  background-color: #282c33;
+  background-color: #1c1c1c;
 }
 .icon > img {
   filter: invert(1);
@@ -92,7 +98,7 @@ li a {
   height: auto;
 }
 .mobileWrap {
-  background-color: #282c33;
+  background-color: #1c1c1c;
   position: absolute;
   z-index: -1;
   left: 0;
