@@ -25,12 +25,8 @@ export default function Navbar() {
     debugger;
   }
   return (
-    <div className={nav.wrapper}>
+    <div id="navbar" className={nav.wrapper}>
       <div className={nav.deskWrapper}>
-        <p className={nav.name} data-aos="slide-up">
-          VIGNESH SIVAGNANAM ©
-        </p>
-
         <ul data-aos="slide-up" className={nav.deskList}>
           <li>
             <NavLink className={nav.NavLink} to="/">
@@ -42,6 +38,14 @@ export default function Navbar() {
               Works
             </NavLink>
           </li>
+        </ul>
+        {/* <p className={nav.name} data-aos="slide-up">
+          VIGNESH SIVAGNANAM ©
+        </p> */}
+
+        <img src="/logo.svg" alt="" className=" h-auto max-w-[60px]" />
+
+        <ul data-aos="slide-up" className={nav.deskList}>
           <li>
             <NavLink className={nav.NavLink} to="/About">
               About
@@ -55,19 +59,11 @@ export default function Navbar() {
         </ul>
       </div>
       <div className={nav.MobWrapper}>
-        {isMenu ? (
-          <img
-            alt="vignesh-sivagnanam-logo"
-            className={nav.logo}
-            src="https://res.cloudinary.com/de8yvffdl/image/upload/v1695308203/Asset_20web_ae0xsk.png"
-          ></img>
-        ) : (
-          <img
-            alt="vignesh-sivagnanam-logo"
-            className={nav.logo}
-            src="https://res.cloudinary.com/de8yvffdl/image/upload/v1695307621/Asset_19web_ezufsc.png"
-          ></img>
-        )}
+        <img
+          alt="vignesh-sivagnanam-logo"
+          className={nav.logo}
+          src="/logo.svg"
+        ></img>
         <div className={nav.icon} onClick={menuClick}>
           {isMenu && isMenu ? (
             <img
