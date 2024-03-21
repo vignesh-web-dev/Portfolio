@@ -1,0 +1,8 @@
+/* .projectcard:hover > .blackbg {
+  top: 0;
+}
+.blackbg {
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
