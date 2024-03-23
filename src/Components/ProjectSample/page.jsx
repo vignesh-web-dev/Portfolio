@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectSample = ({ heading, imag, platform, link, design }) => {
+const ProjectSample = ({ heading, imag, platform, link, design, desc }) => {
   return (
     <Link href={link ? link : "#"} target="blank">
       <div
@@ -19,11 +19,7 @@ const ProjectSample = ({ heading, imag, platform, link, design }) => {
             Sample Project
           </p>
           <h2 className=" font-inter font-semibold text-2xl">{heading}</h2>
-          <p className=" font-normal font-inter text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            deserunt labore aspernatur. Repudiandae nemo provident inventore?
-            Sit, aspernatur? Distinctio eaque.
-          </p>
+          <p className=" font-normal font-inter text-sm">{desc}</p>
         </div>
       </div>
     </Link>

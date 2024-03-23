@@ -1,10 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Form = () => {
+  const SubmitButton = useRef(null);
+  useEffect(() => {
+    AOS.init();
+    return () => {};
+  }, []);
   const onSubmit = async (e) => {
+    SubmitButton.current.classList.add("disabled");
+
     const formEle = document.querySelector("form");
     e.preventDefault();
     const formData = new FormData(formEle);
@@ -22,6 +32,7 @@ const Form = () => {
             "Your message has been received. Expect a prompt response from us shortly."
           );
           formEle.reset();
+          SubmitButton.current.classList.remove("disabled");
         }
       });
     } catch (error) {
@@ -29,7 +40,17 @@ const Form = () => {
     }
   };
   return (
-    <section id="contact">
+    <section
+      data-aos="fade-up"
+      data-aos-offset="00"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      id="contact"
+    >
       <div className=" w-[95%] mx-auto py-5 rounded-[40px] px-6 pb-6 flex flex-col justify-center items-center gap-10">
         <p className=" text-xl text-black font-inter font-normal tracking-[5px] uppercase border-b border-black w-fit">
           Contact Form
@@ -81,6 +102,7 @@ const Form = () => {
             ></textarea>
           </div>
           <button
+            ref={SubmitButton}
             className=" w-fit mx-auto bg-green px-9 py-3 rounded-full text-xl leading-[20px] font-semibold cursor-pointer text-black"
             type="submit"
           >

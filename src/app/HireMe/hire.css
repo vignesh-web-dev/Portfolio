@@ -1,0 +1,6 @@
+.tran {
+  transition: all 1 ease;
+}
+.tran:hover {
+  scale: 1.5;
+}

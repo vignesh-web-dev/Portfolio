@@ -35,11 +35,13 @@ const Cards = ({ heading, imag, platform, link, design }) => {
         {link ? (
           <Link
             href={link}
-            className=" text-base font-bricolage font-medium bg-white p-3 rounded-xl"
+            className=" text-base font-bricolage font-medium bg-white px-3 py-1 md:px-3 md:py-3 rounded-xl"
           >
             View Project
           </Link>
-        ) : <div></div>}
+        ) : (
+          <div></div>
+        )}
       </div>
 
       <div
